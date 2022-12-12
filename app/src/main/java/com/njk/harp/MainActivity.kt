@@ -10,12 +10,16 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.LinearLayout
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.njk.harp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+    private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -29,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        bottomSheetBehavior = BottomSheetBehavior.from(findViewById(R.id.player_bottom_sheet))
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
