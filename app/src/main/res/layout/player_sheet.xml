@@ -2,17 +2,29 @@
 
 <!--  Bottom sheet which contains player  -->
 
-    <LinearLayout
-        android:id="@+id/player_bottom_sheet"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        style="@style/Widget.Material3.BottomSheet"
+<LinearLayout
+    android:id="@+id/player_bottom_sheet"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Material3.BottomSheet"
 
+    android:layout_width="match_parent"
+    android:layout_height="500sp"
+    app:behavior_peekHeight="100dp"
+    app:behavior_hideable="false"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <!-- Drag handle for accessibility -->
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:id="@+id/drag_handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
-
+        android:orientation="horizontal">
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -20,7 +32,7 @@
         <!--    TODO: scrolling text        -->
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="48dp"
             android:gravity="center_vertical"
             android:text="@string/test_string"/>
         <!--    Player Controls       -->
@@ -43,5 +55,6 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:src="@drawable/skip_next"/>
-        </LinearLayout>
     </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

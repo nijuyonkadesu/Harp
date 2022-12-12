@@ -23,11 +23,6 @@
 <!--  Anything that appears in middle of the screen  -->
     <include layout="@layout/content_main" />
 
-    <!-- Drag handle for accessibility -->
-<!--    <com.google.android.material.bottomsheet.BottomSheetDragHandleView-->
-<!--        android:id="@+id/drag_handle"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"/>-->
     <include layout="@layout/player_sheet" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

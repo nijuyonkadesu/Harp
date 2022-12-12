@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         bottomSheetBehavior = BottomSheetBehavior.from(findViewById(R.id.player_bottom_sheet))
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
